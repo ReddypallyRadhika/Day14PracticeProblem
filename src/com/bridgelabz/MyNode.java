@@ -84,15 +84,17 @@ this.next=next;
 		MyLinkedList<Integer> firstNode1= new MyLinkedList<Integer>(56);
 		MyLinkedList<Integer> secondNode1 = new MyLinkedList<Integer>(30);
 		MyLinkedList<Integer> thirdNode1 = new MyLinkedList<Integer>(70);
-		firstNode1.add(secondNode1);
-		secondNode1.add(thirdNode1);
+		firstNode1.add((INode<Integer>) secondNode1);
+		secondNode1.add((INode<Integer>) thirdNode1);
 		
 		MyLinkedList<Integer> firstNode2= new MyLinkedList<Integer>(56);
 		MyLinkedList<Integer> secondNode2 = new MyLinkedList<Integer>(30);
 		MyLinkedList<Integer> thirdNode2 = new MyLinkedList<Integer>(70);
-		firstNode2.append(secondNode2);
-		secondNode2.append(thirdNode2);
+		firstNode2.append((INode<Integer>) secondNode2);
+		secondNode2.append((INode<Integer>) thirdNode2);
 		
+		//MyLinkedList<Integer> popNode1= new MyLinkedList<Integer>(56);
+		//popNode1.pop();
 	}
 
 }

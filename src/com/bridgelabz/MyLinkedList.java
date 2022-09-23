@@ -47,6 +47,12 @@ public class MyLinkedList<K> implements INode<Integer> {
 		System.out.println("My Nodes:"+head);
 	}
 
+	public  INode<K> pop()
+	{
+		INode<K> tempNode = this.head;
+		this.head=head.getNext();
+		return tempNode;
+	}
 	@Override
 	public Integer getKey() {
 		// TODO Auto-generated method stub
