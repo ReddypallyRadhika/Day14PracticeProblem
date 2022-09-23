@@ -29,6 +29,18 @@ public class MyLinkedList<K> implements INode<Integer> {
 			this.head.setNext(tempNode);
 		}
 	}
+	public void append(INode<K> newNode) {
+		if (this.tail == null) {
+			this.tail = newNode;
+		}
+		if (this.head == null) {
+			this.head = newNode;
+		} else {
+			INode<K> tempNode = this.tail;
+			this.tail = newNode;
+			this.tail.setNext(tempNode);
+		}
+	}
 
 	public void printMyNodes()
 	{
